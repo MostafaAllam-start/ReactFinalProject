@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: grey;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.margin{
+  margin-top: 60px;
+ 
+  
+}
+.width{
+  width: 150px;
+  height:150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 10px;
+}
+.cont{
+  width: 500px;
+  height: 300px;
+  border-radius: 25px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #F1EFDC;
+}
+.ro{
+  width: 510px;
+  border-radius: 25px;
+  background-color: #1CD6CE;
+}
+.btn-green{
+  background-color: #30514e;
+}
+.product{
+  width: 270px;
+  height: 350px;
+  border: 1px solid rgb(245, 241, 241);
+  border-radius: 25px;
+}
+.img{
+  width: 268px;
+  height: 200px;
+  border-radius: 25px 25px 0px 0px;
+
+
+}
+.description{
+  color:gray;
+  /* padding-left:10px; */
+}
+.addbutton{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  /* font-weight: 70px; */
+  background-color: #30514e;
+  color: white;
+}
+.heading{
+  /* margin:5px auto; */
+/* text-align: center; */
+padding-left: 10px;
+
+}
+.modalheadingcolor{
+  color: #30514e;
+  font-family: 'Courgette', cursive;
+}
+.aligncenter{
+margin-left: 60px;
+/* margin: 10px auto; */
+color:#30514e
+}
+.emailinput{
+ height: 50px;
+ border: hidden;
+
+}
+.bg{
+  background-color: #f8f8f8;
+}
+.signupsubmit{
+  background-color: #30514e;
+  color: white;
+  border-radius: 6px;
+}
+.modalpopup{
+  width: 200px;
+  height: 50px;
+  border-radius: 6px;
+  /* border: hidden; */
+  background-color: white;
+  color: #30514e;
+  border: 1px solid #30514e;
+}
+.modalpopup:hover{
+  border:hidden;
+  color:white;
+  background-color: #30514e;
+}
+.signinpopup{
+  width: 200px;
+  height: 50px;
+  border-radius: 6px;
+  border:hidden;
+  color:white;
+  background-color: #30514e;
+}
+.signinpopup:hover{
+  background-color: white;
+  color: #30514e;
+  border: 1px solid #30514e;
+}

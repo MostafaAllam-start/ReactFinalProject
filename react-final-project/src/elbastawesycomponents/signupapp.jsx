@@ -49,7 +49,7 @@ return(
     <Logout handleclick={handlelogout} hidden={loading || !currentUser} />
     <h1>{currentUser?.email}</h1> 
      </div>
-    <div className='container'>
+    <div className='container d-grid gap-2 d-flex flex-row'>
     <Signup emailref={emailref} passwordref={passwordref} handleclick={handlesignup} hidden={loading|| currentUser}/>
     <Signin emailref2={emailref2} passwordref2={passwordref2} handleclick={handlelogin} hidden={loading||currentUser}/>
     </div>

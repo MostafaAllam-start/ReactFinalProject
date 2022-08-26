@@ -2,39 +2,48 @@ import React from 'react'
 function Signin(props){
     return(
         <React.Fragment>
-<button className='btn btn-outline-primary m-2' data-bs-toggle="modal" data-bs-target="#exampleModal" hidden={props.hidden}>Sign in</button>
+   <div>
+          {/* <!-- Button trigger modal --> */}
+<button type="button" class="signinpopup" data-bs-toggle="modal" data-bs-target="#exampleModal2" hidden={props.hidden}>
+ Login Now!
+</button>
 
-            <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog text-center">
-    <div class="modal-content text-center">
-      <div class="modal-header text-center">
-        <h5 class="modal-title text-primary" id="exampleModalLabel">Sign in Now</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+{/* <!-- Modal --> */}
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content ">
+      <div className="container ">
+      <div class="row ">
+      <div class=" col-9 m-3  text-center" id="exampleModalLabel"></div>
+      <button type="button" class="btn-close col-3  m-3 " data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-    
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email' ref={props.emailref2}/>
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label" >Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder='password' ref={props.passwordref2}/>
-  </div>
- 
-  
-
+      <div class="row ">
+      <h5 class=" col-10 m-2  text-center modalheadingcolor " id="exampleModalLabel">Fin.</h5>
+        
       </div>
-      
-        {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
-        <div className='d-grid gap-2 col-6 mx-auto'>
-        <button type="button" class="btn btn-primary mb-2"  data-bs-dismiss="modal" onClick={props.handleclick}>Sign in</button>
+      </div>
+      <div class="container ">
+      <div className='row '>
+      <input type={"email"} placeholder="email" className='col-10 m-4 emailinput bg' ref={props.emailref2}/>
+        
+        </div>
+        <div className='row '>
+      <input type={"password"} placeholder="Password" className='col-10 m-4 emailinput bg'  ref={props.passwordref2}/>
+        
+        </div>
+        <div className='row '>
+      <input type={"button"} value={"sign in"} className='col-10 m-4 emailinput signupsubmit '  data-bs-dismiss="modal" onClick={props.handleclick} />
+        
         </div>
       </div>
+      {/* <div class="">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> */}
     </div>
   </div>
-
+</div>
+        </div>
 
         </React.Fragment>
     )
