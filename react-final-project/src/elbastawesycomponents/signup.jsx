@@ -1,11 +1,26 @@
 // import { useRef } from "react";
 import React  from 'react';
+import {signup,useAuth} from "./firebase"
+import {useState,useRef} from 'react';
+
 // import {signup,useAuth} from "./firebase";
 function Signup(props){
-  
+    const [loading,setloading]=useState(false);
+    const emailref=useRef();
+    const passwordref=useRef();
+    const currentUser=useAuth();
+    async function handlesignup(){
+        setloading(true);
+           try {
+            await signup(emailref.current.value,passwordref.current.value)
+           } catch (error) {
+            alert("not a valid email")
+           }
+           setloading(false)
+        }
     return(
         <React.Fragment>
-<button type="button" class="modalpopup" data-bs-toggle="modal" data-bs-target="#exampleModal" hidden={props.hidden}>
+<button type="button" class="modalpopup" data-bs-toggle="modal" data-bs-target="#exampleModal" hidden={currentUser||loading}>
  Signup Now!
 </button>
 
@@ -25,15 +40,15 @@ function Signup(props){
       </div>
       <div class="container ">
       <div className='row '>
-      <input type={"email"} placeholder="email" className='col-10 m-4 emailinput bg' ref={props.emailref}/>
+      <input type={"email"} placeholder="email" className='col-10 m-4 emailinput bg' ref={emailref}/>
         
         </div>
         <div className='row '>
-      <input type={"password"} placeholder="Password" className='col-10 m-4 emailinput bg'  ref={props.passwordref}/>
+      <input type={"password"} placeholder="Password" className='col-10 m-4 emailinput bg'  ref={passwordref}/>
         
         </div>
         <div className='row '>
-      <input type={"button"} value={"sign up"} className='col-10 m-4 emailinput signupsubmit '  data-bs-dismiss="modal" onClick={props.handleclick} />
+      <input type={"button"} value={"sign up"} className='col-10 m-4 emailinput signupsubmit '  data-bs-dismiss="modal" onClick={handlesignup} />
         
         </div>
       </div>

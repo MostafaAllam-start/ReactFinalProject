@@ -7,7 +7,8 @@ state={
   name:"",
   description:"",
   price:"",
-  imgsrc:""
+  imgsrc:"",
+  categorie:""
 }
 onchangehandler=(e)=>{
   this.setState({[e.target.name]:e.target.value})
@@ -21,6 +22,7 @@ submithandler=(e)=>{
     price:this.state.price,
     description:this.state.description,
     imgsrc:this.state.imgsrc,
+    categorie:this.state.categorie
 
 
   })
@@ -50,6 +52,10 @@ render(){
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">product image link</label>
     <input type="text" class="form-control" id="exampleInputPassword1" name="imgsrc" onChange={this.onchangehandler}/>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">product categorie</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="categorie" onChange={this.onchangehandler}/>
   </div>
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1"/>

@@ -1,10 +1,32 @@
 import React from 'react'
+
+import {useAuth,login} from "./firebase"
+import {useState,useRef} from 'react';
+
 function Signin(props){
+    const [loading,setloading]=useState(false);
+
+    const passwordref2=useRef();
+    const emailref2=useRef();
+    const currentUser=useAuth();
+    async function handlelogin(){
+        setloading(true);
+        try {
+         await login(emailref2.current.value,passwordref2.current.value)
+         console.log(emailref2.current.value);
+         console.log(passwordref2.current.value);
+        } catch (error) {
+         alert("error not found !")
+         console.log(emailref2.current.value);
+         console.log(passwordref2.current.value);
+        }
+        setloading(false)
+    }
     return(
         <React.Fragment>
    <div>
           {/* <!-- Button trigger modal --> */}
-<button type="button" class="signinpopup" data-bs-toggle="modal" data-bs-target="#exampleModal2" hidden={props.hidden}>
+<button type="button" class="signinpopup" data-bs-toggle="modal" data-bs-target="#exampleModal2" hidden={currentUser ||loading}>
  Login Now!
 </button>
 
@@ -23,18 +45,20 @@ function Signin(props){
       </div>
       </div>
       <div class="container ">
+      
       <div className='row '>
-      <input type={"email"} placeholder="email" className='col-10 m-4 emailinput bg' ref={props.emailref2}/>
+      <input type={"email"} placeholder="email" className='col-10 m-4 emailinput bg' ref={emailref2}/>
         
         </div>
         <div className='row '>
-      <input type={"password"} placeholder="Password" className='col-10 m-4 emailinput bg'  ref={props.passwordref2}/>
+      <input type={"password"} placeholder="Password" className='col-10 m-4 emailinput bg'  ref={passwordref2}/>
         
         </div>
         <div className='row '>
-      <input type={"button"} value={"sign in"} className='col-10 m-4 emailinput signupsubmit '  data-bs-dismiss="modal" onClick={props.handleclick} />
+      <input type={"button"} value={"sign in"} className='col-10 m-4 emailinput signupsubmit '  data-bs-dismiss="modal" onClick={handlelogin} />
         
         </div>
+     
       </div>
       {/* <div class="">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
