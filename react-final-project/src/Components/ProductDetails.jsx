@@ -1,7 +1,5 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Button from '@mui/material/Button';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 const ProductDetails = (props) => {
     const product = props.products.filter(product => product.id === Number(props.match.params.id))[0];
     return ( 
@@ -10,11 +8,12 @@ const ProductDetails = (props) => {
                 <Carousel>
                     {product.imgs.map((url, index)=>{
                         return(
-                            <Carousel.Item key={index} style={{height:'50hv'}}>
+                            <Carousel.Item key={index}>
                                 <img                                    
                                     className="d-block mx-auto w-80"
                                     src={url}
                                     alt={`slide ${index}`}
+                                    style={{height:'50vh'}}
                                 />
                             </Carousel.Item>
                         )
@@ -26,16 +25,7 @@ const ProductDetails = (props) => {
                 <p>{product.description}</p>
                 
                 <div  className="d-flex justify-content-end">
-                    <Button
-                        vaiant='outlined'
-                        onClick={() => props.onAddToCart(product)}
-                    >
-                        <AddShoppingCartIcon 
-                            sx={{
-                                fontSize:50,
-                            }}
-                        />
-                    </Button>
+                    <i className="fa-solid fa-cart-plus fa-2x text-primary" style={{cursor:"pointer"}} onClick={()=>this.props.onAddToCart(product)}/>
                 </div>
             </div>
         </>
