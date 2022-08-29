@@ -25,7 +25,7 @@ const ProductDetails = (props) => {
                 <p>{product.description}</p>
                 
                 <div  className="d-flex justify-content-end">
-                    <i className="fa-solid fa-cart-plus fa-2x text-primary" style={{cursor:"pointer"}} onClick={()=>this.props.onAddToCart(product)}/>
+                    <i className="fa-solid fa-cart-plus fa-2x text-primary" style={{cursor:"pointer"}} onClick={()=>props.onAddToCart(product)}/>
                 </div>
             </div>
         </>

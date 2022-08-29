@@ -78,27 +78,29 @@ class App extends Component {
                             }} exact
                         />
                         <Route path="/products/:id" render={(props)=>{
-                            return(
-                                <ProductDetails 
-                                    products={this.state.products}
-                                    onAddToCart={this.handelAddToCart}
-                                    {...props}
-                                />
-                            );
-                        }}/>
+                                return(
+                                    <ProductDetails 
+                                        products={this.state.products}
+                                        onAddToCart={this.handelAddToCart}
+                                        {...props}
+                                    />
+                                );
+                            }}
+                        />
                         <Route path="/shoppingcart" render={(props)=>{
-                            return(
-                                <ShoppingCart 
-                                    products={this.state.shopping_cart_products}
-                                    onRemove={this.handelRemoveFromCart}
-                                    onClear={this.handelClearCart}
-                                    onCountIncrease={this.handelCountIncrease}
-                                    onCountDecrease={this.handelCountDecrease}
-                                    onCountChange={this.handelCountChange}
-                                    {...props}
-                                />
-                            );
-                        }}/>
+                                return(
+                                    <ShoppingCart 
+                                        products={this.state.shopping_cart_products}
+                                        onRemove={this.handelRemoveFromCart}
+                                        onClear={this.handelClearCart}
+                                        onCountIncrease={this.handelCountIncrease}
+                                        onCountDecrease={this.handelCountDecrease}
+                                        onCountChange={this.handelCountChange}
+                                        {...props}
+                                    />
+                                );
+                            }}
+                        />
                     </Switch>
                 <Footer/>
             </>
