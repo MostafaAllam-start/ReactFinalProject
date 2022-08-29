@@ -33,8 +33,8 @@ render(){
     return(
        <React.Fragment>
        <form className="container">
-       <h1>
-        Product information
+       <h1 className="text-center mt-2 modalheadingcolor ">
+       Add Product information
        </h1>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">product name:</label>

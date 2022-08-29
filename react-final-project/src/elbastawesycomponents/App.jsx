@@ -2,46 +2,47 @@ import React from 'react';
 import {BrowserRouter as Router,Route,Switch,} from "react-router-dom";
 import Addproduct from './addproduct';
 import Carousel from './carousel';
-import Nav from './Nav';
+import Nav from './Nav'; 
+import Navbar from './newnavbar';
+import Banner from './banner';
 import Productdetails from './productdetails';
 import Products from './products';
-import Signin from './signin';
-import Signup from './signup';
+
+import Gallery from './gallery';
+import Subscribtion from './emailsub';
+import Footing from './newfooter';
 
 
 function App(){
    
     return(
        <React.Fragment>
-       <Nav/>
        
           
-        <div className="container">
-            <div className='row'>
-                <div className='col-6'></div>
-                <div className='col-3'>
-                <Signup/>
-                </div>
-                <div className='col-3'>
-                <Signin/> 
-                </div>
-            </div>
-        </div>   
+       
         <Switch>
         <Route path="/" exact>
-       
+        <Navbar/>
+       <Banner/>
         <Carousel/>
+        <Gallery/>
+        <Subscribtion/>
+        
         </Route>
             <Route path="/Add"  >
+            <Nav/>
                <Addproduct/>
             </Route>
             <Route path="/Products">
+            <Nav/>
                 <Products/>
             </Route>
             <Route path="/:id">
+            <Nav/>
                 <Productdetails/>
             </Route>
         </Switch>
+        <Footing/>
        </React.Fragment>
     )
 }

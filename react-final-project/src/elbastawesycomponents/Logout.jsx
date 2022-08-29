@@ -14,8 +14,9 @@ function Logout(props){
         setloading(false)
     }
 return(
-    <button type='button' className=' btn m-2 border-none' onClick={handlelogout} hidden={loading||!currentUser}>  logout </button>
+    // <button type='button' className=' btn m-2 border-none' onClick={handlelogout} hidden={loading||!currentUser}>  logout </button>
     // <a  onClick={handlelogout} hidden={loading||!currentUser}> logout</a>
+    <a className="nav-link" href="#login" onClick={handlelogout} hidden={loading||!currentUser}><i class="fa-solid fa-right-from-bracket"></i></a>
 )
 
 }

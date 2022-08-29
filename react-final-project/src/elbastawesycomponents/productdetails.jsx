@@ -30,7 +30,7 @@ function Productdetails(){
     return(
         <React.Fragment>
     {/* <h1>{name}</h1> */}
-    <div className="container  m-4 detail-container ">
+    <div className="container  mb-3 detail-container ">
    
         {display.map((product)=>{return (
             <div className="row m-4">
@@ -49,7 +49,7 @@ function Productdetails(){
   )})}
   
     </div>
-    <div className=" text-center  container p-3 m-4 detail-container">
+    <div className=" text-center  container p-3 mb-3 detail-container">
     <h3 className="text-left modalheadingcolor">you may also like:</h3>
     <div className='row row-cols-1 row-cols-md-3 g-4 container-fluid mt-4'>
 

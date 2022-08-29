@@ -2,6 +2,7 @@ import React from 'react';
 import { collection,getDocs } from 'firebase/firestore';
 import  { useEffect, useState } from 'react'
 import { db } from './firebase';
+import{Link} from 'react-router-dom'
 function Carousel (){
   
       const [products,setproducts]=useState([]);
@@ -31,7 +32,7 @@ function Carousel (){
     return(
         <React.Fragment>
         
-            <div className='container bg-white'>
+            <div className='container-fluid bg-white p-2 mb-2'>
             
             <div className='col d-flex justify-content-center'>
                <a className='p-2 carousellink active' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"  aria-current="true" aria-label="Slide 1">Chairs</a>
@@ -51,16 +52,21 @@ function Carousel (){
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
 
   </div> */}
+  <div className='container-fluid  p-4 bg-light'>
   <div class="carousel-inner">
-    <div class="carousel-item active border bg-light">
+    <div class="carousel-item active  ">
     <h1 className='text-light'>c1</h1>
-    <div className='row'>
+    <div className='row '>
     {chairs.map((product)=>{return (
-            <div class="col">
-            <div className='product bg-white'>
-            <img src={product.imgsrc} className='img'/>
+            <div class="col ">
+            <div className='product bg-white '>
+            <img src={product.imgsrc} className='img' alt='product img'/>
             <h5 className='heading'>{product.name}</h5>
-            <p className='description'> {product.description}</p>
+            <p className='description'> {product.description}
+            <Link to={`/${product.id}`}>
+            more ...
+            </Link>
+            </p>
             <div className='row'>
             <h4 className='col-8 '>${product.price}.00</h4>
             <button className='addbutton col-2  border '>
@@ -78,15 +84,19 @@ function Carousel (){
     </div>
     
     </div>
-    <div class="carousel-item bg-light">
-    <h1 className='text-light'>c2</h1>
+    <div class="carousel-item ">
+    {/* <h1 className='text-light'>c2</h1> */}
     <div className='row'>
     {beds.map((product)=>{return (
             <div class="col">
             <div className='product bg-white'>
             <img src={product.imgsrc} className='img'/>
             <h5 className='heading'>{product.name}</h5>
-            <p className='description'> {product.description}</p>
+            <p className='description'> {product.description}
+            <Link to={`/${product.id}`}>
+            more ...
+            </Link>
+            </p>
             <div className='row'>
             <h4 className='col-8 '>${product.price}.00</h4>
             <button className='addbutton col-2  border '>
@@ -101,15 +111,19 @@ function Carousel (){
 
     </div>
     </div>
-    <div class="carousel-item bg-light">
-    <h1 className='text-light'>c3</h1>
+    <div class="carousel-item ">
+    {/* <h1 className='text-light'>c3</h1> */}
     <div className='row'>
     {sofa.map((product)=>{return (
             <div class="col">
             <div className='product bg-white'>
             <img src={product.imgsrc} className='img'/>
             <h5 className='heading'>{product.name}</h5>
-            <p className='description'> {product.description}</p>
+            <p className='description'> {product.description}
+            <Link to={`/${product.id}`}>
+            more ...
+            </Link>
+            </p>
             <div className='row'>
             <h4 className='col-8 '>${product.price}.00</h4>
             <button className='addbutton col-2  border '>
@@ -132,7 +146,11 @@ function Carousel (){
             <div className='product bg-white'>
             <img src={product.imgsrc} className='img'/>
             <h5 className='heading'>{product.name}</h5>
-            <p className='description'> {product.description}</p>
+            <p className='description'> {product.description}
+            <Link to={`/${product.id}`}>
+            more ...
+            </Link>
+            </p>
             <div className='row'>
             <h4 className='col-8 '>${product.price}.00</h4>
             <button className='addbutton col-2  border '>
@@ -160,6 +178,7 @@ function Carousel (){
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+            </div>
             </div>
         </React.Fragment>
     )
