@@ -50,7 +50,7 @@ class Products extends Component {
                                                 <h5 className="card-title">{product.title}</h5>
                                                 <p className="card-text">{product.description.slice(0,30)}....<Link to={`products/${product.id}`}>more</Link></p>
                                                 <div className="d-flex flex-row-reverse">
-                                                    <i className="fa-solid fa-cart-plus fa-2x text-primary" style={{cursor:"pointer"}} onClick={()=>this.props.onAddToCart(product)}/>
+                                                    <i className="fa-solid fa-cart-plus fa-2x" style={{cursor:"pointer", color:"#30514e"}} onClick={()=>this.props.onAddToCart(product)}/>
                                                 </div>
                                             </div>
 

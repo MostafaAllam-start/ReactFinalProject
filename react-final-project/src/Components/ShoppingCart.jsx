@@ -109,7 +109,7 @@ class ShoppingCart extends Component {
                         </div>
                     </>
                     :
-                    <div className="text-center">
+                    <div className="text-center" style={{height:"44.9vh"}}>
                         <h5>Your cart is currently empty</h5>
                         <Link
                             to="/products"

@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: grey;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.margin{
+  margin-top: 60px;
+ 
+  
+}
+.width{
+  width: 150px;
+  height:150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 10px;
+}
+.cont{
+  width: 500px;
+  height: 300px;
+  border-radius: 25px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #F1EFDC;
+  opacity: 0.5;
+}
+.ro{
+  width: 510px;
+  border-radius: 25px;
+  background-color: #1CD6CE;
+}
+.btn-green{
+  background-color: #30514e;
+}
+.product{
+  width: 270px;
+  height: 350px;
+  border: 1px solid rgb(245, 241, 241);
+  border-radius: 25px;
+  border-bottom: 100px;
+}
+.img{
+  width: 268px;
+  height: 200px;
+  border-radius: 25px 25px 0px 0px;
+
+
+}
+.description{
+  color:gray;
+  /* padding-left:10px; */
+}
+.addbutton{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  /* font-weight: 70px; */
+  background-color: #30514e;
+  color: white;
+}
+.heading{
+  /* margin:5px auto; */
+/* text-align: center; */
+padding-left: 10px;
+
+}
+.modalheadingcolor{
+  color: #30514e;
+  font-family: 'Courgette', cursive;
+}
+.aligncenter{
+margin-left: 60px;
+/* margin: 10px auto; */
+color:#30514e
+}
+.emailinput{
+ height: 50px;
+ border: hidden;
+
+}
+.bg{
+  background-color: #f8f8f8;
+}
+.signupsubmit{
+  background-color: #30514e;
+  color: white;
+  border-radius: 6px;
+}
+.modalpopup{
+  width: 200px;
+  height: 50px;
+  border-radius: 6px;
+  /* border: hidden; */
+  background-color: white;
+  color: #30514e;
+  border: 1px solid #30514e;
+}
+.modalpopup:hover{
+  border:hidden;
+  color:white;
+  background-color: #30514e;
+}
+.signinpopup{
+  width: 200px;
+  height: 50px;
+  border-radius: 6px;
+  border:hidden;
+  color:white;
+  background-color: #30514e;
+}
+.signinpopup:hover{
+  background-color: white;
+  color: #30514e;
+  border: 1px solid #30514e;
+}
+.carousellink{
+  text-decoration: none;
+  color: gray;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  position: relative;
+  padding-right: 10px;
+  cursor: pointer;
+  /* border: 1px solid black; */
+  
+}
+.carousellink::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #30514e;
+  margin-bottom: 10px;
+  /* border: 1px solid black; */
+  
+}
+
+
+.carousellink:hover::before{
+  cursor: pointer;
+  color: #30514e;
+  /* text-decoration: underline;  */
+ width: 100%;
+  transition: 0.9s;
+/* border-bottom: 1px solid #30514e; */
+}
+.carousellink:hover{
+  color: #30514e;
+}
+.bg-white{
+  background-color: white;
+}
+.detailimg{
+  border-radius: 25px;
+}
+.producttitle{
+  font-family: 'Roboto', sans-serif;
+}
+.pricedetail{
+  color: #30514e;
+  font-family: 'Roboto', sans-serif;
+font-weight: bold;
+}
+.detail-container{
+  background-color: #f8f8f8;
+}
+.bg-green{
+  background-color: #30514e;
+}
+.bannerimg{
+  width: 600px;
+  height: 270px;
+  position: absolute;
+  top: 0px;
+  
+  /* left: 0px; */
+  right: 200px;
+
+  /* position-absolute top-50  */
+}
+.containerimg{
+  width: 200px;
+  height: 300px;
+  border-radius: 25px;
+}
+.img1{
+  width: 200px;
+  height: 300px;
+  border-radius: 25px;
+}
+.img2{
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+}
+.img3{
+  width: 200px;
+  height: 250px;
+  border-radius: 25px;
+}
+.img4{
+  width: 300px;
+  height: 200px;
+  border-radius: 25px;
+}
+.subscribe{
+  background-color: #f8f8f8;
+}
+.title{
+  font-family: 'Courgette', cursive;
+  color: white;
+}
+.bg-green{
+  background-color: #30514e;
+  border: none;
+  border-radius: 6px;
+  height: 40px;
+}
+.background-img{
+  /* background-image: url("../src/omarcomponents/Rectangle.png"); */
+  /* background-size: contain; */
+  /* background-color: #f8f8f8; */
+  border-radius: 0px 0px 0px 25px;  
+}
+.borderless{
+  border: 1px solid #F1EFDC;
+  border-radius: 6px;
+}
